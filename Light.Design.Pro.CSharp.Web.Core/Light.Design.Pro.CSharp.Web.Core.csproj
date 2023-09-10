@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<NoWarn>1701;1702;1591</NoWarn>
+		<DocumentationFile>Light.Design.Pro.CSharp.Web.Core.xml</DocumentationFile>
+	</PropertyGroup>
+
+
+
+	<ItemGroup>
+		<None Remove="Light.Design.Pro.CSharp.Web.Core.xml" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Light.Design.Pro.CSharp.Application\Light.Design.Pro.CSharp.Application.csproj" />
+		<ProjectReference Include="..\Light.Design.Pro.CSharp.Database.Migrations\Light.Design.Pro.CSharp.Database.Migrations.csproj" />
+	</ItemGroup>
+
+</Project>

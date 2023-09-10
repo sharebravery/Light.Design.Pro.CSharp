@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Light.Design.Pro.CSharp.Application</name>
+    </assembly>
+    <members>
+        <member name="P:Light.Design.Pro.CSharp.Application.Models.User.UserName">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="P:Light.Design.Pro.CSharp.Application.Models.User.Name">
+            <summary>
+            用户名(显示)
+            </summary>
+        </member>
+        <member name="P:Light.Design.Pro.CSharp.Application.Models.User.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:Light.Design.Pro.CSharp.Application.Models.User.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:Light.Design.Pro.CSharp.Application.Models.User.EmailConfirmed">
+            <summary>
+            邮箱确认
+            </summary>
+        </member>
+        <member name="T:Light.Design.Pro.CSharp.Application.SystemAppService">
+            <summary>
+            系统服务接口
+            </summary>
+        </member>
+        <member name="M:Light.Design.Pro.CSharp.Application.SystemAppService.GetDescription">
+            <summary>
+            获取系统描述
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
