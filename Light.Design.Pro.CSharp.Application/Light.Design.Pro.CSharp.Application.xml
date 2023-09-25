@@ -4,22 +4,25 @@
         <name>Light.Design.Pro.CSharp.Application</name>
     </assembly>
     <members>
-        <member name="P:Light.Design.Pro.CSharp.Application.Models.User.UserName">
+        <member name="M:Light.Design.Pro.CSharp.Application.Auth.Account.SignInAsync(Light.Design.Pro.CSharp.Application.Auth.Dtos.LoginDataDto)">
             <summary>
-            用户
+            登录
+            </summary>
+            <param name="loginDataDto"></param>
+        </member>
+        <member name="M:Light.Design.Pro.CSharp.Application.Auth.Account.Register(Light.Design.Pro.CSharp.Application.Users.UserDto)">
+            <summary>
+            注册
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Light.Design.Pro.CSharp.Application.Auth.Dtos.LoginDataDto.Account">
+            <summary>
+            用户名
             </summary>
         </member>
-        <member name="P:Light.Design.Pro.CSharp.Application.Models.User.Name">
-            <summary>
-            用户名(显示)
-            </summary>
-        </member>
-        <member name="P:Light.Design.Pro.CSharp.Application.Models.User.Email">
-            <summary>
-            邮箱
-            </summary>
-        </member>
-        <member name="P:Light.Design.Pro.CSharp.Application.Models.User.Password">
+        <member name="P:Light.Design.Pro.CSharp.Application.Auth.Dtos.LoginDataDto.Password">
             <summary>
             密码
             </summary>
@@ -38,6 +41,45 @@
             <summary>
             获取系统描述
             </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Light.Design.Pro.CSharp.Application.Users.UserDto.Account">
+            <summary>
+            账号
+            </summary>
+        </member>
+        <member name="P:Light.Design.Pro.CSharp.Application.Users.UserDto.NickName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:Light.Design.Pro.CSharp.Application.Users.UserDto.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:Light.Design.Pro.CSharp.Application.Users.UserDto.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="M:Light.Design.Pro.CSharp.Application.Users.UsersService.Add(Light.Design.Pro.CSharp.Application.Models.User)">
+            <summary>
+            新增用户
+            </summary>
+            <param name="user"></param>
+        </member>
+        <member name="M:Light.Design.Pro.CSharp.Application.Users.UsersService.Find">
+            <summary>
+            条件查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Light.Design.Pro.CSharp.Application.Users.UsersService.FindById(System.Int32)">
+            <summary>
+            根据ID查找
+            </summary>
+            <param name="id"></param>
             <returns></returns>
         </member>
     </members>

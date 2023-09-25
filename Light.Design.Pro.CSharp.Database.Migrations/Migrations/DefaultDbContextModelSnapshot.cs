@@ -19,22 +19,26 @@ namespace Light.Design.Pro.CSharp.Database.Migrations.Migrations
                 .HasAnnotation("ProductVersion", "7.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("Light.Design.Pro.CSharp.Application.Models.User", b =>
+            modelBuilder.Entity("Light.Design.Pro.CSharp.Application.Users.UserDto", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    b.Property<string>("Account")
+                        .HasColumnType("longtext");
+
                     b.Property<DateTimeOffset>("CreatedTime")
                         .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Email")
                         .HasColumnType("longtext");
 
-                    b.Property<bool>("EmailConfirmed")
-                        .HasColumnType("tinyint(1)");
-
-                    b.Property<string>("Name")
+                    b.Property<string>("NickName")
                         .HasColumnType("longtext");
 
                     b.Property<string>("Password")
@@ -43,12 +47,23 @@ namespace Light.Design.Pro.CSharp.Database.Migrations.Migrations
                     b.Property<DateTimeOffset?>("UpdatedTime")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<string>("UserName")
-                        .HasColumnType("longtext");
-
                     b.HasKey("Id");
 
-                    b.ToTable("User");
+                    b.ToTable("UserDto");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("UserDto");
+
+                    b.UseTphMappingStrategy();
+                });
+
+            modelBuilder.Entity("Light.Design.Pro.CSharp.Application.Models.User", b =>
+                {
+                    b.HasBaseType("Light.Design.Pro.CSharp.Application.Users.UserDto");
+
+                    b.Property<bool?>("EmailConfirmed")
+                        .HasColumnType("tinyint(1)");
+
+                    b.HasDiscriminator().HasValue("User");
                 });
 #pragma warning restore 612, 618
         }
